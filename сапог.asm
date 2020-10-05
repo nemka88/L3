@@ -8,7 +8,7 @@ mov 360,r3
 out r3,p3
 mov 360,r0
 out r0,p4
-mov 1FE0,r1  
+mov 1FE0,r1
 out r1,p5
 mov 1FE0,r2
 out r2,p6
@@ -17,38 +17,49 @@ out r3,p7
 
 m:
 ;‰¬»√¿≈Ã  –€ÿ”
-IN P0,R0
-ROR 1,r0
-OUT R0,P0
+
+         
+IN P0,R3
+ROR 1,r3
+not r3
+
 ;
 IN P1,R0
 ROR 1,r0
-OUT R0,P1
+not r0
+OUT R0,P0
 ;
 IN P2,R0
 ROR 1,r0
-OUT R0,P2
+not r0
+OUT R0,P1
 ;
 IN P3,R0
 ROR 1,r0
-OUT R0,P3
+not r0
+OUT R0,P2
 ;
 IN P4,R0
 ROR 1,r0
-OUT R0,P4
+not r0
+OUT R0,P3
 ;
 IN P5,R0
 ROR 1,r0
-OUT R0,P5
+not r0
+OUT R0,P4
 ;
 IN P6,R0
 ROR 1,r0
-OUT R0,P6
+not r0
+OUT R0,P5
 ;
 IN P7,R0
 ROR 1,r0
-OUT R0,P7
-;
+not r0
+OUT R0,P6
+
+OUT R3,P7;
 JMP m
 
 stop
